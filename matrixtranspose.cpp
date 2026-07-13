@@ -8,14 +8,22 @@ int main(){
     int n=3 ; 
     int m=3;
 
-    for(int i=0;i<n;i++){
-        for(int j=0;j<m;j++){
-            cout<<matrix[i][j];
+    //now transpose
+for(int i=0;i<n;i++){
+    for(int j=0;j<m;j++){
+        swap(matrix[i][j],matrix[j][i]);
+
+    }
+}
+for(int i=0;i<n;i++){
+    reverse(matrix[i], matrix[i] + n);;
+}
+for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cout<<matrix[i][j]<<" ";
         }
         cout<<endl;
     }
-    //now transpose
 
-    
-
+return 0;
 }
